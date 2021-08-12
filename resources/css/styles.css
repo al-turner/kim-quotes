@@ -1,0 +1,60 @@
+@font-face {
+    font-family: 'Nova';
+    src:  url('../fonts/SinaNovaReg-webfont.woff2') format('woff2'),
+          url('../fonts/SinaNovaReg-webfont.woff') format('woff');
+  }
+
+body {
+    background-color: #2C1605;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+p {
+    font-family: 'Nova', sans-serif;
+    color: #D7D7D0;
+    animation: DialogeLoadIn 3s; 
+}
+
+strong {
+    color: white;
+}
+
+.kim-portrait {
+    margin-top: 15px;
+    border-radius: 25%;
+}
+
+.dialogue-background {
+    background-color: black;
+    margin: 50px 10px 0px 10px;
+    padding: 20px 15px 25px 15px;
+}
+
+button {
+    font-family: 'Nova', sans-serif;
+    font-size: 16px;
+    margin: 50px 10px 0px 10px;
+    padding: 5px 15px;
+    background-color: black;
+    color: #BC5836;
+    border: none;
+}
+
+button:hover {
+    cursor: pointer;
+    color: #cc5f3a;
+}
+
+@keyframes DialogeLoadIn {
+    0%   { 
+        opacity: 0;
+        transform: translateY(15px); 
+    }
+    100% { 
+        opacity: 1; 
+        transform: translateX(0);
+    }
+  }
