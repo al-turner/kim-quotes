@@ -4,9 +4,13 @@
     url("../fonts/SinaNovaReg-webfont.woff") format("woff");
 }
 
+html,body {
+    overscroll-behavior-y: none;
+}
+
 body {
   overflow-y: hidden;
-  height: 100%;
+  height: 100vh;
   background-color: #2c1605;
 }
 
