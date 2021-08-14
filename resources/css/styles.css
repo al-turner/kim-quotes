@@ -6,10 +6,11 @@
 
 html,body {
     overscroll-behavior-y: none;
+    overflow: hidden;
+    touch-action: manipulation;
 }
 
 body {
-  overflow-y: hidden;
   height: 100vh;
   background-color: #2c1605;
 }
@@ -49,7 +50,7 @@ strong {
 
 button {
   position: fixed;
-  top: 70vh;
+  bottom: 10vh;
   left: 0;
   right: 0;
   width: 250px;
@@ -87,15 +88,12 @@ button:hover {
   }
   
   button {
-      top: 75vh;
+      bottom: 10vh;
   }
 }
 
 @media screen and (max-width: 400px) {
     p {
         font-size: 14px;
-    }
-    button {
-        top: 85vh;
     }
 }
