@@ -15,7 +15,10 @@ newQuote = () => {
     }
     usedQuotes.push(randomQuoteNo);
     return myQuotes[randomQuoteNo];
-  } else return undefined;
+  } else {
+      usedQuotes = [];
+      return "Are you going to make me repeat myself?"
+  }
 };
 
 function displayQuote(quote) {
