@@ -6,18 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./resources/css/minimal-reset.css" />
     <link rel="stylesheet" href="./resources/css/styles.css" />
+    <script defer src="./resources/js/quotes.js"></script>
     <script defer src="./resources/js/index.js"></script>
     <title>Kim-Quotes</title>
   </head>
   <body>
-    <img
-      src="./resources/images/Portrait_kitsuragi.png"
-      class="kim-portrait"
-      alt=""
-    />
-    <div class="dialogue-background">
-      <p><strong>KIM KITSURAGI - </strong>"This is an example quote"</p>
+    <div class="kim">
+      <img
+        src="./resources/images/Portrait_kitsuragi.png"
+        class="kim-portrait"
+        alt=""
+      />
+      <div class="dialogue-background">
+        <p id="dialogue">
+          <strong>KIM KITSURAGI - </strong>"<span id="quoteHolder"
+            >Hello Detective...</span
+          >"
+        </p>
+      </div>
     </div>
-    <button>1. What else does he have to say?</button>
+
+    <button id="quoteSelector">1. What else does he have to say?</button>
   </body>
 </html>
