@@ -74,8 +74,24 @@ button:hover {
   }
 }
 
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 600px) {
+  .dialogue-background {
+      width: 50%;
+  }
   .kim-portrait {
     width: 25%;
   }
+  
+  button {
+      top: 75vh;
+  }
+}
+
+@media screen and (max-width: 400px) {
+    p {
+        font-size: 14px;
+    }
+    button {
+        top: 85vh;
+    }
 }
