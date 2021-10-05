@@ -1,44 +1,35 @@
-let quoteHolder = document.getElementById("quoteHolder");
-let dialogue = document.getElementById("dialogue");
-let quoteSelector = document.getElementById("quoteSelector");
-let usedQuotes = [];
-
-const randomInt = () => Math.floor(Math.random() * myQuotes.length);
-
-newQuote = () => {
-  if (usedQuotes.length < myQuotes.length) {
-    let randomQuoteNo = randomInt();
-    if (usedQuotes.includes(randomQuoteNo)) {
-      do {
-        randomQuoteNo = randomInt();
-      } while (usedQuotes.includes(randomQuoteNo));
+const vueApp = new Vue({
+  el: "#app",
+  mounted() {
+    this.myQuotes = quotes
+  },
+  data: {
+    quote: "Hello Detective...",
+    newText: false,
+    usedQuotes: [],
+    myQuotes: []
+  },
+  methods: {
+    newQuote: function () {
+      if (this.usedQuotes.length < this.myQuotes.length) {
+        let randomQuoteNo = this.randomInt();
+        if (this.usedQuotes.includes(randomQuoteNo)) {
+          do {
+            randomQuoteNo = this.randomInt();
+          } while (this.usedQuotes.includes(randomQuoteNo));
+        }
+        this.usedQuotes.push(randomQuoteNo);
+        return this.myQuotes[randomQuoteNo];
+      } else {
+        this.usedQuotes = [];
+        return "Are you going to make me repeat myself?";
+      }
+    },
+    displayQuote: function() {
+      this.quote = this.newQuote();
+    },
+    randomInt: function() {
+      return Math.floor(Math.random() * this.myQuotes.length);
     }
-    usedQuotes.push(randomQuoteNo);
-    return myQuotes[randomQuoteNo];
-  } else {
-      usedQuotes = [];
-      return "Are you going to make me repeat myself?"
-  }
-};
-
-function displayQuote(quote) {
-  dialogue.classList.add("text-load");
-  if (quote != undefined) {
-    quoteHolder.innerHTML = quote;
-  } else quoteHolder.innerHTML = "I have nothing else to say...";
-}
-
-quoteSelector.addEventListener(
-  "click",
-  function () {
-    displayQuote(newQuote());
   },
-  false
-);
-dialogue.addEventListener(
-  "animationend",
-  function () {
-    dialogue.classList.remove("text-load");
-  },
-  false
-);
+});

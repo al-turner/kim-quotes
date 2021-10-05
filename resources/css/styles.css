@@ -33,7 +33,7 @@ strong {
 
 .kim-portrait {
   width: 50%;
-  margin-top: 15px;
+  margin-top: 55px;
   border-radius: 25%;
 }
 
@@ -44,7 +44,7 @@ strong {
   padding: 20px 15px 25px 15px;
 }
 
-.text-load {
+.textLoad {
   animation: DialogeLoadIn 0.5s;
 }
 

@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/vuex"></script>
     <link rel="stylesheet" href="./resources/css/minimal-reset.css" />
     <link rel="stylesheet" href="./resources/css/styles.css" />
     <script defer src="./resources/js/quotes.js"></script>
@@ -11,21 +13,25 @@
     <title>Kim-Quotes</title>
   </head>
   <body>
-    <div class="kim">
-      <img
-        src="./resources/images/Portrait_kitsuragi.png"
-        class="kim-portrait"
-        alt=""
-      />
-      <div class="dialogue-background">
-        <p id="dialogue">
-          <strong>KIM KITSURAGI - </strong>"<span id="quoteHolder"
-            >Hello Detective...</span
-          >"
-        </p>
+    <div id="app">
+      <div class="kim">
+        <img
+          src="./resources/images/Portrait_kitsuragi.png"
+          class="kim-portrait"
+          alt=""
+        />
+        <div class="dialogue-background">
+          <p v-on:animationend="newText = false" v-bind:class="{textLoad: newText}">
+            <strong>KIM KITSURAGI - </strong>
+            <span>{{quote}}</span>
+          </p>
+        </div>
       </div>
-    </div>
 
-    <button id="quoteSelector">What else does he have to say?</button>
+      <button @click="newText = true" v-on:click="displayQuote">
+        What else does he have to say?
+      </button>
+    </div>
   </body>
 </html>
+

@@ -1,5 +1,4 @@
-let myQuotes = [
-    "You're barking up the wrong tree. I don't speak a word of Seolite, I've never met either one of my grandparents. And I've never *been* to Seol.\" He seems almost proud of these things. \"I'm a regular Revacholiere.",
+quotes = ["You're barking up the wrong tree. I don't speak a word of Seolite, I've never met either one of my grandparents. And I've never *been* to Seol.\" He seems almost proud of these things. \"I'm a regular Revacholiere.",
     "Okay. I wanted to become an aerostatic pilot. Then I turned ten and realized we no longer have an air force.",
     "Binoclard... binoclard...\" he repeats to himself, eyes fixed on the ground.",
     "That time is over now.\" He looks at the pinball machine and breathes in. \"I was already a 38 year old man. It was unbecoming. As was playing pinball.",
